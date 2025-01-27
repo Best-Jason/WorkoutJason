@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'
 import User from '../models/userModel.js'
 
-export const requireAuth = async (req, res, next) => {
+const requireAuth = async (req, res, next) => {
   // verify user is authenticated
   const { authorization } = req.headers
 
@@ -23,3 +23,4 @@ export const requireAuth = async (req, res, next) => {
   }
 }
 
+export default requireAuth
